@@ -1,0 +1,18 @@
+{
+  "name": "devfeed-rest-api",
+  "version": "1.0.0",
+  "description": "Dev feed REST API",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "json-server"
+  ],
+  "author": "Julio Sampaio <julio@email.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "json-server": "^0.12.1"
+  }
+}

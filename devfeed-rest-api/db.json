@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fullname": "Julio Sampaio",
+      "email": "julio@email.com",
+      "password": "gr@phql",
+      "colleagues": [
+        {
+          "name": "Michael Fogus",
+          "github": "fogus",
+          "twitter": "fogus"
+        },
+        {
+          "name": "Wes Bos",
+          "github": "wesbos",
+          "twitter": "wesbos"
+        }
+      ]
+    }
+  ]
+}
