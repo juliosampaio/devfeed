@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Dev feed REST API",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "keywords": [
     "rest",
@@ -13,6 +13,10 @@
   "author": "Julio Sampaio <julio@email.com>",
   "license": "MIT",
   "devDependencies": {
-    "json-server": "^0.12.1"
+    "json-server": "^0.12.1",
+    "nodemon": "^1.17.2"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^8.2.0"
   }
 }
