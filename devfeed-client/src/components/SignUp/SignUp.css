@@ -1,0 +1,16 @@
+.container {
+  padding-top: 50px;
+}
+
+.left {
+  background-color: #33E3CA;
+  height: 500px;
+  border-radius: 10px 0 0 10px;
+  box-shadow: -10px 0px 35px #9E475D;
+}
+.right {
+  background-color: #344863;
+  height: 500px;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 10px -10px 35px #9E475D
+}
