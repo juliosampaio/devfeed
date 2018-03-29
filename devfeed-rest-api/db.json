@@ -1,10 +1,10 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "ry0Qd3Y9M",
       "fullname": "Julio Sampaio",
       "email": "julio@email.com",
-      "password": "gr@phql",
+      "password": "015d1440b939ac092db6009ccb0f2a8f",
       "colleagues": [
         {
           "name": "Michael Fogus",
@@ -17,6 +17,13 @@
           "twitter": "wesbos"
         }
       ]
+    },
+    {
+      "id": "Bybf52YqG",
+      "email": "bart@simpson.com",
+      "fullname": "Bart Simpson",
+      "password": "015d1440b939ac092db6009ccb0f2a8f",
+      "colleagues": []
     }
   ]
 }
