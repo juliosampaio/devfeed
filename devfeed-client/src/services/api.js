@@ -7,6 +7,10 @@ const api = (method, url, data) => {
     },
     body: JSON.stringify(data)
   }).then(resp => {
+    if (resp.status === 401) {
+      localStorage.removeItem('access_token')
+      return Promise.reject({ message: 'UNAUTHORIZED' } )
+    }
     if (resp.status !== 200) {
       return resp.json().then(({ error }) => {
         throw new Error(error)

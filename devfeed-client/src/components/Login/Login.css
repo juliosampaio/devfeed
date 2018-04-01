@@ -1,0 +1,14 @@
+.signup-link {
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  color: #6e747b;
+}
+.signup-link a {
+  color: #ACB3BE;
+  border-bottom: 1px solid #33E3CA;
+}
+.signup-link a:hover {
+  text-decoration: none;
+  color: #ACB3BE;
+}

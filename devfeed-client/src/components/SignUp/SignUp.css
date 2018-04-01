@@ -32,19 +32,19 @@ form {
 .form-group input {
   border: none;
   background: none;
-  border-bottom: 1px solid #506075;
+  border-bottom: 1px solid #6e747b;
   box-shadow: none;
   border-radius: initial;
   color: #ACB3BE;
 }
 
 .form-group input::placeholder {
-  color: #506075;
+  color: #6e747b;
 }
 
 .form-group input:focus {
   box-shadow: none;
-  border-color: #506075;
+  border-color: #6e747b;
 }
 
 form button {
