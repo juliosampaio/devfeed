@@ -24,7 +24,9 @@ const login = db => (req, res) => {
   const { email, password } = req.body
   const user = findUser(email, md5(password), db)
   if (user) {
-    const payload = { id: user.id, email }
+    const payload = {
+      id: user.id, email, emailHash: md5(email), fullname: user.fullname,
+    }
     const token = jwt.sign(payload, secret, { expiresIn: '1h' });
     res.jsonp(token);
   } else {
