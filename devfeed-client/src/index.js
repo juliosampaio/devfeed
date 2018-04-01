@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
+import ReduxToastr from 'react-redux-toastr'
+import 'react-redux-toastr/lib/css/react-redux-toastr.min.css'
 import { App } from './components/App';
 import rootReducer from './reducers';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -16,9 +18,20 @@ const store = createStore(rootReducer,
 
 ReactDOM.render((
   <Provider store={store}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <Fragment>
+      <ReduxToastr
+        timeOut={4000}
+        newestOnTop={false}
+        preventDuplicates
+        position="top-center"
+        transitionIn="fadeIn"
+        transitionOut="fadeOut"
+        progressBar
+      />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Fragment>
   </Provider>
 ), document.getElementById('root'));
 registerServiceWorker();
