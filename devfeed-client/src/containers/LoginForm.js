@@ -31,7 +31,10 @@ class LoginForm extends React.Component {
     <form onSubmit={(e) => submitForm(e, dispatch)}>
       {children}
       {state.isLoggedIn && (
-        <Redirect to="/home" />
+        <Redirect to={{
+          pathname: '/home',
+          state: state.user
+        }} />
       )}
     </form>
   )}

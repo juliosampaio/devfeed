@@ -13,6 +13,13 @@ const initialState = {
   messageTitle: '',
   message: '',
   messageType: '',
+  user: {}
+}
+
+const parseJwt = (token) => {
+  var base64Url = token.split('.')[1];
+  var base64 = base64Url.replace('-', '+').replace('_', '/');
+  return JSON.parse(window.atob(base64));
 }
 
 const buildMessage = (key) => {
@@ -28,7 +35,8 @@ const handleLoginSuccess = (state, payload) => {
     ...state,
     isFetching: false,
     hasMessage: false,
-    isLoggedIn: true
+    isLoggedIn: true,
+    user: parseJwt(payload)
   }
   return newState
 }

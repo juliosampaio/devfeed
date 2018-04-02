@@ -1,0 +1,15 @@
+.colleagues-list {
+  padding: 30px;
+  overflow-y: scroll;
+  position: relative;
+  padding-right: 26px;
+  padding-left: 35px;
+  height: 500px;
+}
+.colleagues-list::-webkit-scrollbar-thumb {
+  background: #f8f7fb;
+  opacity: .4;
+}
+.colleagues-list::-webkit-scrollbar-track {
+  background: none;
+}

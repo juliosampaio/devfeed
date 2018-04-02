@@ -1,0 +1,49 @@
+.colleague-card {
+  padding: 16px 32px;
+  margin-bottom: 16px;
+  float: left;
+  width: 100%;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, .72);
+  box-shadow: 0px 16px 25px 0px rgba(118, 88, 198, 0.1);
+  cursor: pointer;
+}
+.colleague-card .avatar {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.colleague-card .avatar img {
+  width: 64px;
+  height: 64px;
+  border: 2px solid #FF8996;
+  box-sizing: content-box;
+}
+.colleague-card .name h3{
+  color: #4c5f99;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+}
+.colleague-card .job h4{
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+.colleague-card .job > div {
+  color: #9eaacc;
+}
+.colleague-card .tags {
+  font-size: 13px;
+  padding: 13px;
+  width: 100%;
+  overflow: hidden;
+}
+.colleague-card .tag {
+  border-bottom: 2px solid #FF8996;
+  font-weight: bold;
+  margin: 5px;
+}
