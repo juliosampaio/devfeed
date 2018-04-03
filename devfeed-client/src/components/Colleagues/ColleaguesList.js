@@ -30,6 +30,27 @@ const colleagues = [
     tags: ["Java", "SpringBoot",  "RxJava", "GraphQL", "REST"],
     location: 'Fortaleza, CE',
     company: 'Paypal'
+  },
+  {
+    name: "Claudio Guglieri",
+    avatar: "https://uixninja.github.io/pehia/img/person_carousel.jpg",
+    tags: ["Java", "SpringBoot",  "RxJava", "GraphQL", "REST"],
+    location: 'Fortaleza, CE',
+    company: 'Paypal'
+  },
+  {
+    name: "Claudio Guglieri",
+    avatar: "https://uixninja.github.io/pehia/img/person_carousel.jpg",
+    tags: ["Java", "SpringBoot",  "RxJava", "GraphQL", "REST"],
+    location: 'Fortaleza, CE',
+    company: 'Paypal'
+  },
+  {
+    name: "Claudio Guglieri",
+    avatar: "https://uixninja.github.io/pehia/img/person_carousel.jpg",
+    tags: ["Java", "SpringBoot",  "RxJava", "GraphQL", "REST"],
+    location: 'Fortaleza, CE',
+    company: 'Paypal'
   }
 ]
 
