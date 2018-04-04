@@ -4,26 +4,36 @@
       "id": "ry0Qd3Y9M",
       "fullname": "Julio Sampaio",
       "email": "julio@email.com",
-      "password": "015d1440b939ac092db6009ccb0f2a8f",
-      "colleagues": [
-        {
-          "name": "Michael Fogus",
-          "github": "fogus",
-          "twitter": "fogus"
-        },
-        {
-          "name": "Wes Bos",
-          "github": "wesbos",
-          "twitter": "wesbos"
-        }
-      ]
+      "password": "4297f44b13955235245b2497399d7a93"
     },
     {
       "id": "Bybf52YqG",
       "email": "bart@simpson.com",
       "fullname": "Bart Simpson",
-      "password": "015d1440b939ac092db6009ccb0f2a8f",
-      "colleagues": []
+      "password": "4297f44b13955235245b2497399d7a93"
+    }
+  ],
+  "colleagues": [
+    {
+      "name": "Michael Fogus",
+      "github": "fogus",
+      "twitter": "Astro_Kanai",
+      "userId": "ry0Qd3Y9M",
+      "id": 1
+    },
+    {
+      "name": "Wes Bos",
+      "github": "wesbos",
+      "twitter": "wesbos",
+      "userId": "ry0Qd3Y9M",
+      "id": 2
+    },
+    {
+      "name": "Julio Sampaio",
+      "github": "juliosampaio",
+      "twitter": "juliocssampaio",
+      "userId": "ry0Qd3Y9M",
+      "id": 3
     }
   ]
 }

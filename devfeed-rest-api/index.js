@@ -1,11 +1,16 @@
+require('dotenv').config()
+
 const jsonServer = require('json-server')
 const authorization = require('./authorization')
+const customResponses = require('./customResponses')
 
 const server = jsonServer.create()
 const router = jsonServer.router('db.json')
 const middlewares = jsonServer.defaults()
 const port = 3000
 
+
+router.render = customResponses
 server.use(middlewares)
 server.use(jsonServer.bodyParser)
 server.use(authorization(router.db))
