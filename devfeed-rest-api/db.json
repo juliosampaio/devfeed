@@ -17,7 +17,7 @@
     {
       "name": "Michael Fogus",
       "github": "fogus",
-      "twitter": "Astro_Kanai",
+      "twitter": "fogus",
       "userId": "ry0Qd3Y9M",
       "id": 1
     },
@@ -34,6 +34,27 @@
       "twitter": "juliocssampaio",
       "userId": "ry0Qd3Y9M",
       "id": 3
+    },
+    {
+      "github": "RafaelKtbhs",
+      "twitter": "RafaelKtbhs",
+      "name": "PNG",
+      "userId": "ry0Qd3Y9M",
+      "id": 4
+    },
+    {
+      "github": "uellyal",
+      "twitter": "uellyal",
+      "name": "Well",
+      "userId": "ry0Qd3Y9M",
+      "id": 5
+    },
+    {
+      "github": "edmolima_",
+      "twitter": "edmolima_",
+      "name": "Edmo",
+      "userId": "ry0Qd3Y9M",
+      "id": 6
     }
   ]
 }

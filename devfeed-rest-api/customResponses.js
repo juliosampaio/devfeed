@@ -1,14 +1,12 @@
 const twitter = require('./twitter.api')
 
 const addAvatar = async colleague => twitter
-  .colleagueTimeline(colleague.twitter)
+  .colleagueTimeline(colleague.twitter, 10)
   .then((tweets) => {
-    // eslint-disable-next-line
     colleague.avatar = tweets[0].user.profile_image_url
-    // eslint-disable-next-line
     colleague.tags = tweets.reduce((tags, tweet) => {
-      console.log(tweet)
-      tags.concat(tweet.entities.hashtags.map(tag => tag.text))
+      console.log(tweet.entities.hashtags)
+      tags = tags.concat(tweet.entities.hashtags.map(tag => tag.text))
       return tags
     }, [])
     return colleague
