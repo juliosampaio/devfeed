@@ -4,10 +4,11 @@ import './App.css';
 import { Login } from '../Login'
 import { SignUp } from '../SignUp'
 import { Home } from '../Home'
+import { getToken } from '../../utils'
 
 const ProtectedRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={(props) => (
-    localStorage.getItem('access_token') !== null
+    getToken() !== null
       ? <Component {...props} />
       : <Redirect to='/login' />
   )} />

@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import ColleagueCard from './ColleagueCard'
 import {Col, Row, FormGroup, ControlLabel, FormControl, Button} from 'react-bootstrap'
+import AddColleagueForm from '../../containers/AddColleague'
 import './ColleaguesList.css'
 const colleagues = [
   {
@@ -59,7 +60,17 @@ const ColleaguesList = () => (
     <Row>
       <Col md={6}>
         <h1>Colleagues</h1>
-        <form clasName="add-new-form">
+        <AddColleagueForm clasName="add-new-form">
+          <FormGroup>
+            <ControlLabel>Name</ControlLabel>
+            <FormControl
+              type="text"
+              required
+              name="name"
+              placeholder="Enter your colleague's name"
+            />
+            <FormControl.Feedback />
+          </FormGroup>
           <FormGroup>
             <ControlLabel>Github</ControlLabel>
             <FormControl
@@ -81,7 +92,7 @@ const ColleaguesList = () => (
             <FormControl.Feedback />
           </FormGroup>
           <Button type="submit">Add colleague</Button>
-        </form>
+        </AddColleagueForm>
       </Col>
       <Col md={6} className="colleagues-list">
       {colleagues.map(colleague => (

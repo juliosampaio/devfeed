@@ -1,20 +1,18 @@
 import { ACTIONS } from '../actions'
-import { getUserFromToken, setToken } from '../utils'
 
 const {
-  LOGIN_REQUEST,
-  LOGIN_REQUEST_SUCCESS,
-  LOGIN_REQUEST_ERROR
+  ADD_COLLEAGUE_REQUEST,
+  ADD_COLLEAGUE_REQUEST_SUCCESS,
+  ADD_COLLEAGUE_REQUEST_ERROR
 } = ACTIONS
 
 const initialState = {
   isFetching: false,
-  isLoggedIn: false,
   hasMessage: false,
   messageTitle: '',
   message: '',
   messageType: '',
-  user: {}
+  newColleague: null
 }
 
 const buildMessage = (key) => {
@@ -24,28 +22,28 @@ const buildMessage = (key) => {
   }
 }
 
-const handleLoginSuccess = (state, payload) => {
-  setToken(payload)
+const handleAddColleagueSuccess = (state, newColleague) => {
   const newState = {
     ...state,
     isFetching: false,
-    hasMessage: false,
-    isLoggedIn: true,
-    user: getUserFromToken()
+    hasMessage: true,
+    messageType: 'success',
+    message: 'New colleague added',
+    newColleague
   }
   return newState
 }
 
-const login = (state = initialState, { type, payload }) => {
+const colleagues = (state = initialState, { type, payload }) => {
   switch (type) {
-    case LOGIN_REQUEST:
+    case ADD_COLLEAGUE_REQUEST:
         return {
           ...state,
           isFetching: true
         }
-      case LOGIN_REQUEST_SUCCESS:
-        return handleLoginSuccess(state, payload)
-      case LOGIN_REQUEST_ERROR:
+      case ADD_COLLEAGUE_REQUEST_SUCCESS:
+        return handleAddColleagueSuccess(state, payload)
+      case ADD_COLLEAGUE_REQUEST_ERROR:
         return {
           ...state,
           isFetching: false,
@@ -59,4 +57,4 @@ const login = (state = initialState, { type, payload }) => {
   }
 }
 
-export default login
+export default colleagues
