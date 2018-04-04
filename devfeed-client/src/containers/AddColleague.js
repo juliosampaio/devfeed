@@ -1,8 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Redirect } from 'react-router'
 import { toastr } from 'react-redux-toastr'
-import { addColleague } from '../actions'
+import { addColleague, listColleagues } from '../actions'
 
 const submitForm = (e, dispatch) => {
   e.preventDefault()
@@ -19,10 +18,17 @@ const mapStateToProps = state => ({
 
 class AddColleague extends React.Component {
 
+  componentWillMount() {
+    listColleagues(this.props.dispatch)
+  }
+
   componentWillReceiveProps(prev) {
-    const { state } = prev
+    const { state, dispatch } = prev
     if (state.hasMessage) {
       toastr[state.messageType](state.messageTitle, state.message)
+    }
+    if (state.newColleague && !state.isFetching) {
+      listColleagues(dispatch)
     }
   }
 

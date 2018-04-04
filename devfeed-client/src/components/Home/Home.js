@@ -15,6 +15,7 @@ const Home = ({ location }) => {
               <div className="profile">
                 <img
                   className="img-responsive img-circle"
+                  alt=""
                   src={`https://www.gravatar.com/avatar/${user.emailHash}`}
                 />
                 <span>{user.fullname}</span>

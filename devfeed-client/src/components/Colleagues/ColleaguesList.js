@@ -1,61 +1,11 @@
 import React, { Fragment } from 'react'
+import { connect } from 'react-redux'
 import ColleagueCard from './ColleagueCard'
 import {Col, Row, FormGroup, ControlLabel, FormControl, Button} from 'react-bootstrap'
 import AddColleagueForm from '../../containers/AddColleague'
 import './ColleaguesList.css'
-const colleagues = [
-  {
-    name: 'Nathan Nicholson',
-    avatar: 'https://uixninja.github.io/pehia/img/person.jpg',
-    tags: ["html", "css",  "javascript"],
-    location: 'San Jose, CA',
-    company: 'Google'
-  },
-  {
-    name: "Claudio Guglieri",
-    avatar: "https://uixninja.github.io/pehia/img/person_carousel.jpg",
-    tags: ["Java", "SpringBoot",  "RxJava"],
-    location: 'Fortaleza, CE',
-    company: 'Paypal'
-  },
-  {
-    name: "Claudio Guglieri",
-    avatar: "https://uixninja.github.io/pehia/img/person_carousel.jpg",
-    tags: ["Java", "SpringBoot",  "RxJava"],
-    location: 'Fortaleza, CE',
-    company: 'Paypal'
-  },
-  {
-    name: "Claudio Guglieri",
-    avatar: "https://uixninja.github.io/pehia/img/person_carousel.jpg",
-    tags: ["Java", "SpringBoot",  "RxJava", "GraphQL", "REST"],
-    location: 'Fortaleza, CE',
-    company: 'Paypal'
-  },
-  {
-    name: "Claudio Guglieri",
-    avatar: "https://uixninja.github.io/pehia/img/person_carousel.jpg",
-    tags: ["Java", "SpringBoot",  "RxJava", "GraphQL", "REST"],
-    location: 'Fortaleza, CE',
-    company: 'Paypal'
-  },
-  {
-    name: "Claudio Guglieri",
-    avatar: "https://uixninja.github.io/pehia/img/person_carousel.jpg",
-    tags: ["Java", "SpringBoot",  "RxJava", "GraphQL", "REST"],
-    location: 'Fortaleza, CE',
-    company: 'Paypal'
-  },
-  {
-    name: "Claudio Guglieri",
-    avatar: "https://uixninja.github.io/pehia/img/person_carousel.jpg",
-    tags: ["Java", "SpringBoot",  "RxJava", "GraphQL", "REST"],
-    location: 'Fortaleza, CE',
-    company: 'Paypal'
-  }
-]
 
-const ColleaguesList = () => (
+const ColleaguesList = ({ state }) => (
   <Fragment>
     <Row>
       <Col md={6}>
@@ -95,12 +45,18 @@ const ColleaguesList = () => (
         </AddColleagueForm>
       </Col>
       <Col md={6} className="colleagues-list">
-      {colleagues.map(colleague => (
-        <ColleagueCard colleague={colleague} />
+      {state && state.colleagues.map(colleague => (
+        <ColleagueCard key={colleague.id} colleague={colleague} />
       ))}
       </Col>
     </Row>
   </Fragment>
 )
 
-export default ColleaguesList
+const mapStateToProps = state => ({
+  state: state.colleagues
+})
+
+export default connect(
+  mapStateToProps
+)(ColleaguesList)
