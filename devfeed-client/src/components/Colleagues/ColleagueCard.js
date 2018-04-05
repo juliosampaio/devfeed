@@ -29,7 +29,7 @@ const ColleagueCard = ({ colleague }) => (
       <Row>
         <Col className="tags" md={12}>
           This colleague is talking about: {colleague.tags && colleague.tags.map( tag => (
-            <span className="tag">#{tag}</span>
+            <span key={tag} className="tag">#{tag}</span>
           ))}
         </Col>
       </Row>

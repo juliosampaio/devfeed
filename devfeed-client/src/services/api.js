@@ -17,6 +17,7 @@ const api = (method, url, data, urlParams = { userId : getUserFromToken().id }) 
   }).then(resp => {
     if (resp.status === 401) {
       removeToken()
+      window.location.href = '/login'
       return Promise.reject({ message: 'UNAUTHORIZED' } )
     }
     if (resp.status < 200 || resp.status > 299) {

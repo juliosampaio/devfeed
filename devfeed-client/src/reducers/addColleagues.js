@@ -3,10 +3,7 @@ import { ACTIONS } from '../actions'
 const {
   ADD_COLLEAGUE_REQUEST,
   ADD_COLLEAGUE_REQUEST_SUCCESS,
-  ADD_COLLEAGUE_REQUEST_ERROR,
-  LIST_COLLEAGUES_REQUEST,
-  LIST_COLLEAGUES_REQUEST_SUCCESS,
-  LIST_COLLEAGUES_REQUEST_ERROR,
+  ADD_COLLEAGUE_REQUEST_ERROR
 } = ACTIONS
 
 const initialState = {
@@ -16,7 +13,6 @@ const initialState = {
   message: '',
   messageType: '',
   newColleague: null,
-  colleagues: []
 }
 
 const buildMessage = (key) => {
@@ -52,15 +48,6 @@ const handleRequest = state => ({
   isFetching: true
 })
 
-const handleListColleagueSuccess = (state, payload) => {
-  return {
-  ...state,
-  isFetching: false,
-  hasMessage: false,
-  newColleague: null,
-  colleagues: payload
-}}
-
 const colleagues = (state = initialState, { type, payload }) => {
   switch (type) {
     case ADD_COLLEAGUE_REQUEST:
@@ -68,12 +55,6 @@ const colleagues = (state = initialState, { type, payload }) => {
       case ADD_COLLEAGUE_REQUEST_SUCCESS:
         return handleAddColleagueSuccess(state, payload)
       case ADD_COLLEAGUE_REQUEST_ERROR:
-        return handleError(state, payload)
-      case LIST_COLLEAGUES_REQUEST:
-        return handleRequest(state)
-      case LIST_COLLEAGUES_REQUEST_SUCCESS:
-        return handleListColleagueSuccess(state, payload)
-      case LIST_COLLEAGUES_REQUEST_ERROR:
         return handleError(state, payload)
     default:
       return state
