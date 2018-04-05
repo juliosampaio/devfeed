@@ -1,4 +1,5 @@
 const twitter = require('./twitter.api')
+const github = require('./github.api')
 
 const addTwitterData = async colleague => twitter
   .colleagueTimeline(colleague.twitter, 10)
