@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Dev feed REST API",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js --config nodemon.json"
   },
   "keywords": [
     "rest",

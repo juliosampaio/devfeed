@@ -1,2 +1,3 @@
 - images: https://iconscout.com/icon/
 - layout: https://dribbble.com/shots/2878911-Task-Manager-Concept-Sign-Up
+- Spinner Animation: http://tobiasahlin.com/spinkit/

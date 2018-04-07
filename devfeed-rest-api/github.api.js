@@ -1,12 +1,18 @@
 const octokit = require('@octokit/rest')()
 
-//https://developer.github.com/v3/activity/events/types/
-
-const getColleagueFeed = () => octokit.activity.getEventsForUserPublic({
-  username: 'juliosampaio'
+const authenticate = () => octokit.authenticate({
+  type: 'basic',
+  username: process.env.GITHUB_USERNAME,
+  password: process.env.GITHUB_PASSWORD,
 })
 
-// Compare: https://developer.github.com/v3/repos/#list-organization-repositories
-getColleagueFeed().then(({data}) => {
-  console.log(data[0])
-})
+// https://developer.github.com/v3/activity/events/types/
+
+const getColleagueFeed = username => octokit.activity.getEventsForUserPublic({ username })
+
+const getProfile = (username) => {
+  authenticate()
+  return octokit.users.getForUser({ username }).then(({ data }) => data)
+}
+
+module.exports = { getColleagueFeed, getProfile }

@@ -27,11 +27,19 @@ const ColleagueCard = ({ colleague }) => (
         </Col>
       </Row>
       <Row>
+      {(colleague.tags && colleague.tags.length > 0) && (
         <Col className="tags" md={12}>
-          This colleague is talking about: {colleague.tags && colleague.tags.map( tag => (
+          This colleague is talking about:<br />
+          {colleague.tags.map( tag => (
             <span key={tag} className="tag">#{tag}</span>
-          ))}
+          ))} click for more...
         </Col>
+      )}
+      {(colleague.tags && colleague.tags.length === 0) && (
+        <Col className="last-tweet" md={12}>
+          {colleague.lastTweet}
+        </Col>
+      )}
       </Row>
     </Col>
   </Row>
