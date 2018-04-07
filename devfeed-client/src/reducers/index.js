@@ -4,6 +4,7 @@ import signup from './signup'
 import login from './login'
 import addColleagues from './addColleagues'
 import listColleagues, { listColleaguesMiddleware } from './listColleagues'
+import fetchColleague from './colleaguesInfo'
 
 export const middlewares = [
   listColleaguesMiddleware
@@ -14,5 +15,6 @@ export default combineReducers({
   login,
   addColleagues,
   listColleagues,
+  fetchColleague,
   toastr
 })

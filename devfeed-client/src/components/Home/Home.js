@@ -1,11 +1,12 @@
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
 import { Grid, Row, Col, Glyphicon} from 'react-bootstrap';
-import { ColleaguesList } from '../Colleagues'
+import { getUserFromToken } from '../../utils'
+import { ColleaguesList, ColleagueDetails } from '../Colleagues'
 import './Home.css'
 
 const Home = ({ location }) => {
-  const user = location.state
+  const user = location.state || getUserFromToken()
   return (
     <Grid className="home">
       <Row>
@@ -26,9 +27,9 @@ const Home = ({ location }) => {
             <Col md={12}>
               <ul className="menu">
                 <li className="active">
-                  <Link to="/home/colleagues"><Glyphicon glyph="thumbs-up" /> Colleagues</Link>
+                  <Link to="/home"><Glyphicon glyph="thumbs-up" /> Colleagues</Link>
                 </li>
-                <li><Link to="/home/settings"><Glyphicon glyph="cog" /> Settings</Link></li>
+                <li><Link to="/settings"><Glyphicon glyph="cog" /> Settings</Link></li>
                 <li><Link to="/login"><Glyphicon glyph="log-out" /> Logout</Link></li>
               </ul>
             </Col>
@@ -36,6 +37,7 @@ const Home = ({ location }) => {
         </Col>
         <Col className="right" md={10}>
           <Route exact path="/home" component={ColleaguesList} />
+          <Route path="/colleagues/:id" component={ColleagueDetails} />
         </Col>
       </Row>
     </Grid>)

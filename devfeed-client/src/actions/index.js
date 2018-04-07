@@ -2,7 +2,8 @@ import {
   signUp as signUpService,
   login as loginService,
   addColleague as addColleagueService,
-  listColleagues as listColleaguesService
+  listColleagues as listColleaguesService,
+  fetchColleague as fetchColleagueService
 } from '../services'
 
 const SIGN_UP_REQUEST = 'SIGN_UP_REQUEST'
@@ -21,6 +22,10 @@ const LIST_COLLEAGUES_REQUEST = 'LIST_COLLEAGUES_REQUEST'
 const LIST_COLLEAGUES_REQUEST_SUCCESS = 'LIST_COLLEAGUES_REQUEST_SUCCESS'
 const LIST_COLLEAGUES_REQUEST_ERROR = 'LIST_COLLEAGUES_REQUEST_ERROR'
 
+const FETCH_COLLEAGUE_REQUEST = 'FETCH_COLLEAGUE_REQUEST'
+const FETCH_COLLEAGUE_REQUEST_SUCCESS = 'FETCH_COLLEAGUE_REQUEST_SUCCESS'
+const FETCH_COLLEAGUE_REQUEST_ERROR = 'FETCH_COLLEAGUE_REQUEST_ERROR'
+
 export const ACTIONS = {
   SIGN_UP_REQUEST,
   SIGN_UP_REQUEST_SUCCESS,
@@ -33,7 +38,10 @@ export const ACTIONS = {
   ADD_COLLEAGUE_REQUEST_ERROR,
   LIST_COLLEAGUES_REQUEST,
   LIST_COLLEAGUES_REQUEST_SUCCESS,
-  LIST_COLLEAGUES_REQUEST_ERROR
+  LIST_COLLEAGUES_REQUEST_ERROR,
+  FETCH_COLLEAGUE_REQUEST,
+  FETCH_COLLEAGUE_REQUEST_SUCCESS,
+  FETCH_COLLEAGUE_REQUEST_ERROR,
 }
 
 export const signUp = (dispatch, userData) => {
@@ -62,4 +70,11 @@ export const listColleagues = (dispatch) => {
   listColleaguesService()
     .then(result => dispatch({ type: LIST_COLLEAGUES_REQUEST_SUCCESS, payload: result }))
     .catch(error => dispatch({ type: LIST_COLLEAGUES_REQUEST_ERROR, payload: error.message }))
+}
+
+export const fetchColleagueInfo = (dispatch, id) => {
+  dispatch({ type: FETCH_COLLEAGUE_REQUEST })
+  fetchColleagueService(id)
+    .then(result => dispatch({ type: FETCH_COLLEAGUE_REQUEST_SUCCESS, payload: result }))
+    .catch(error => dispatch({ type: FETCH_COLLEAGUE_REQUEST_ERROR, payload: error.message }))
 }

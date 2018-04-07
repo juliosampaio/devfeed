@@ -18,9 +18,9 @@ class App extends Component {
   render() {
     return (
         <Switch>
-          <ProtectedRoute exact path='/home' component={Home}/>
-          <Route path='/login' component={Login}/>
-          <Route path='/signup' component={SignUp}/>
+          <Route exact path='/login' component={Login}/>
+          <Route exact path='/signup' component={SignUp}/>
+          <ProtectedRoute path='/:param' component={Home}/>
         </Switch>
     );
   }

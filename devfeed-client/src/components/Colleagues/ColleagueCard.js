@@ -1,10 +1,15 @@
 import React from 'react'
 import { Col, Row, Glyphicon } from 'react-bootstrap'
+import {  } from 'react-router-dom'
 import avatarPlaceholder from './avatarPlaceholder.svg'
 import './ColleaguesCard.css'
 
+const seeColleagueDetails = ({ id }) => {
+  window.location.replace(`colleagues/${id}`)
+}
+
 const ColleagueCard = ({ colleague }) => (
-  <Row className="colleague-card">
+  <Row className="colleague-card" onClick={() => seeColleagueDetails(colleague)}>
     <Col className="avatar" md={3}>
       <img className="img-responsive img-circle" alt="" src={colleague.avatar || avatarPlaceholder} />
     </Col>

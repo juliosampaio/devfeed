@@ -13,7 +13,7 @@ const api = (method, url, data, urlParams = { userId : getUserFromToken().id }) 
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${getToken()}`
     },
-    body: JSON.stringify(data)
+    body: data && JSON.stringify(data)
   }).then(resp => {
     if (resp.status === 401) {
       removeToken()
@@ -26,7 +26,7 @@ const api = (method, url, data, urlParams = { userId : getUserFromToken().id }) 
       })
     }
     return resp.json()
-  })
+  }).catch(console.log)
 }
 
 export default api
