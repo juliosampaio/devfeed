@@ -20,7 +20,8 @@
       "twitter": "juliocssampaio",
       "userId": "ry0Qd3Y9M",
       "id": 1
-    },{
+    },
+    {
       "name": "Michael Fogus",
       "github": "fogus",
       "twitter": "fogus",
@@ -68,6 +69,20 @@
       "github": "amanda",
       "userId": "ry0Qd3Y9M",
       "id": 8
+    },
+    {
+      "name": "PNG",
+      "twitter": "RafaelKtbhs",
+      "github": "rafaellucio",
+      "userId": "ry0Qd3Y9M",
+      "id": 9
+    },
+    {
+      "name": "Edmo",
+      "twitter": "edmolima_",
+      "github": "edmolima",
+      "userId": "ry0Qd3Y9M",
+      "id": 10
     }
   ]
 }

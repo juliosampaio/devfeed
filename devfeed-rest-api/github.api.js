@@ -6,9 +6,10 @@ const authenticate = () => octokit.authenticate({
   password: process.env.GITHUB_PASSWORD,
 })
 
-// https://developer.github.com/v3/activity/events/types/
-
-const getColleagueFeed = username => octokit.activity.getEventsForUserPublic({ username })
+const getColleagueFeed = (username) => {
+  authenticate()
+  return octokit.activity.getEventsForUserPublic({ username }).then(({ data }) => data)
+}
 
 const getProfile = (username) => {
   authenticate()

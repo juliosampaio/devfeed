@@ -1,3 +1,3 @@
-- images: https://iconscout.com/icon/
+- images: https://iconscout.com/icon/, https://www.vecteezy.com
 - layout: https://dribbble.com/shots/2878911-Task-Manager-Concept-Sign-Up
 - Spinner Animation: http://tobiasahlin.com/spinkit/

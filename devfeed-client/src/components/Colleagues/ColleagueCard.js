@@ -1,11 +1,11 @@
 import React from 'react'
 import { Col, Row, Glyphicon } from 'react-bootstrap'
 import {  } from 'react-router-dom'
-import avatarPlaceholder from './avatarPlaceholder.svg'
+import avatarPlaceholder from '../../assets/avatarPlaceholder.svg'
 import './ColleaguesCard.css'
 
 const seeColleagueDetails = ({ id }) => {
-  window.location.replace(`colleagues/${id}`)
+  window.location.href = `colleagues/${id}`
 }
 
 const ColleagueCard = ({ colleague }) => (

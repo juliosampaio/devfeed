@@ -17,18 +17,18 @@ class ColleagueInfo extends React.Component {
     this.props.fetchColleagueInfo()
   }
 
-  componentWillUpdate() {
-    console.log(this.props)
+  addColleagueProp(colleague) {
+    const { children } = this.props
+    const childrenWithProps = React.Children.map(children, child => React.cloneElement(child, { colleague }));
+    return childrenWithProps
   }
 
   render() {
-    const { state, id } = this.props
+    const { state } = this.props
     return (
       <Fragment>
         {state.isFetching && (<Loader />)}
-        {(state && !state.isFetching && state.colleague) && (
-          <div>{JSON.stringify(state.colleague)}</div>
-        )}
+        {(state && !state.isFetching && state.colleague) && (<Fragment>{this.addColleagueProp(state.colleague)}</Fragment>)}
       </Fragment>
     )
   }

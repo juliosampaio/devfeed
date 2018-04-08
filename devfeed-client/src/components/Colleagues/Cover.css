@@ -1,0 +1,39 @@
+.cover {
+  height: 238px;
+  width: 100%;
+  padding: 15px;
+  overflow: hidden;
+  animation: fadein 2s;
+}
+
+.cover img:first-child {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+}
+
+.cover .avatar {
+  width: 133px;
+  height: 133px;
+  position: absolute;
+  top: 185px;
+  left: 5%;
+  border: 2px solid #FF8996;
+}
+
+.social, .followers {
+  padding-left: 200px;
+}
+.followers {
+  display: flex;
+}
+.followers h4 {
+  color: #ffffff;
+  font-size: 14px;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.followers h4 span {
+  color: #94b5ff;
+}

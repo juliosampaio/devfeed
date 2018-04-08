@@ -1,5 +1,4 @@
 import api from './api'
-import { getUserFromToken } from '../utils'
 
 const colleagues_url = 'http://localhost:3000/users/{userId}/colleagues'
 
