@@ -30,7 +30,7 @@ const Home = ({ location }) => {
                   <Link to="/home"><Glyphicon glyph="thumbs-up" /> Colleagues</Link>
                 </li>
                 <li><Link to="/settings"><Glyphicon glyph="cog" /> Settings</Link></li>
-                <li><Link to="/login"><Glyphicon glyph="log-out" /> Logout</Link></li>
+                <li><Link to="/login" onClick={() => localStorage.clear()}><Glyphicon glyph="log-out" /> Logout</Link></li>
               </ul>
             </Col>
           </Row>
