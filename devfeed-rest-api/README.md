@@ -3,6 +3,10 @@
 This is the source code for the REST API used in the Medium storie: [Building a API Gateway with GraphQL](final_url)
 
 ## Running
+Install the dependencies by running:
+```
+npm i
+```
 
 This application consumes data form Github's and Twitter's API's so you'll need to provide your credentials data in order to get the application runing correctly. To retrieve the required data, please follow the steps bellow.
 
@@ -36,3 +40,10 @@ curl -X POST \
 Easy Peasy, just put your username and password for `GITHUB_USERNAME` and `GITHUB_PASSWORD` keys values. It will allow the application make up to 5000 requests per hour. For unauthenticated requests, the rate limit allows for up to 60 requests per hour.
 
 > WARNING: Keep in mind that these are your Twitter and Github credentials, do not share them in public repositories
+
+### Start the server
+Run the command:
+```
+npm start
+```
+The server will start at http://localhost:3000
