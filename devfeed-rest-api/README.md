@@ -47,3 +47,9 @@ Run the command:
 npm start
 ```
 The server will start at http://localhost:3000
+
+### Inspecting with Postman
+
+Click the button below to preview API details through Postman
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/7c1e420381e04eba3252#?env%5BDEVFEED_DEV%5D=W3sia2V5IjoicmVzdF9hcGlfYmFzZV91cmwiLCJ2YWx1ZSI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImVuYWJsZWQiOnRydWUsInR5cGUiOiJ0ZXh0In0seyJrZXkiOiJ0b2tlbiIsInZhbHVlIjoiZXlKaGJHY2lPaUpJVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SnBaQ0k2SW5KNU1GRmtNMWs1VFNJc0ltVnRZV2xzSWpvaWFuVnNhVzlBWlcxaGFXd3VZMjl0SWl3aVpXMWhhV3hJWVhOb0lqb2lNVFJtTXpJMVpUZzVaVFE0TkRNNFpXUTJObVUyTjJNeVpEZ3haVEUwTVRFaUxDSm1kV3hzYm1GdFpTSTZJa3AxYkdsdklGTmhiWEJoYVc4aUxDSnBZWFFpT2pFMU1qUXhPRGsxT1Rjc0ltVjRjQ0k2TVRVeU5ERTVNekU1TjMwLnhLa29XQ2lNY1dQSGYwSDBIUEdIZ19sYWhMUTNOWF95TXRERW12S0pUZnciLCJlbmFibGVkIjp0cnVlLCJ0eXBlIjoidGV4dCJ9XQ==)
