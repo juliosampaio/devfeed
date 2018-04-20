@@ -8,81 +8,25 @@
     },
     {
       "id": "Bybf52YqG",
-      "email": "bart@simpson.com",
+      "email": "bart@simpsons.com",
       "fullname": "Bart Simpson",
       "password": "4297f44b13955235245b2497399d7a93"
     }
   ],
   "colleagues": [
     {
-      "name": "Julio Sampaio",
-      "github": "juliosampaio",
-      "twitter": "juliocssampaio",
-      "userId": "ry0Qd3Y9M",
-      "id": 1
-    },
-    {
       "name": "Michael Fogus",
       "github": "fogus",
       "twitter": "fogus",
       "userId": "ry0Qd3Y9M",
-      "id": 2
+      "id": 1
     },
     {
       "name": "Wes Bos",
       "github": "wesbos",
       "twitter": "wesbos",
       "userId": "ry0Qd3Y9M",
-      "id": 3
-    },
-    {
-      "name": "a",
-      "twitter": "a",
-      "github": "a",
-      "userId": "ry0Qd3Y9M",
-      "id": 4
-    },
-    {
-      "name": "b",
-      "twitter": "b",
-      "github": "b",
-      "userId": "ry0Qd3Y9M",
-      "id": 5
-    },
-    {
-      "name": "c",
-      "twitter": "c",
-      "github": "c",
-      "userId": "ry0Qd3Y9M",
-      "id": 6
-    },
-    {
-      "name": "lara",
-      "twitter": "lara",
-      "github": "lara",
-      "userId": "ry0Qd3Y9M",
-      "id": 7
-    },
-    {
-      "name": "amanda",
-      "twitter": "amanda",
-      "github": "amanda",
-      "userId": "ry0Qd3Y9M",
-      "id": 8
-    },
-    {
-      "name": "PNG",
-      "twitter": "RafaelKtbhs",
-      "github": "rafaellucio",
-      "userId": "ry0Qd3Y9M",
-      "id": 9
-    },
-    {
-      "name": "Edmo",
-      "twitter": "edmolima_",
-      "github": "edmolima",
-      "userId": "ry0Qd3Y9M",
-      "id": 10
+      "id": 2
     }
   ]
 }
