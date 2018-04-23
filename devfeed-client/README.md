@@ -11,6 +11,12 @@ Start the application:
 ```
 npm start
 ```
+
+## Screenshots
+![Signup](./screenshots/signup.png)
+![Login](./screenshots/login.png)
+![Colleagues List](./screenshots/colleagues-list.png)
+![Colleague feed](./screenshots/colleague-feed.png)
 ### CREDITS
 - images: https://iconscout.com/icon/, https://www.vecteezy.com
 - layout: https://dribbble.com/shots/2878911-Task-Manager-Concept-Sign-Up
